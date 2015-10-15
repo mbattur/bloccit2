@@ -15,7 +15,8 @@ source 'https://rubygems.org'
  end
  
  group :development, :test do
-  gem 'rspec-rails', '~> 3.0'\
+  gem 'rspec-rails', '~> 3.0'
+  gem 'pry-rails'
  end
  
  
