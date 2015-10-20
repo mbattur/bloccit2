@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Question, type: :model do
-  let (:question) {Question.create! }
+  let (:question) {Question.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph) }
   
   describe "attributes" do
       it "should respond to title" do
@@ -12,8 +12,8 @@ RSpec.describe Question, type: :model do
           expect(question).to respond_to(:body)
       end
       
-      it "should respond to boolean" do
-          expect(question).to respond_to(:boolean)
+      it "should respond to resolved" do
+          expect(question).to respond_to(:resolved)
       end
   end
 end
