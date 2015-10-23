@@ -3,7 +3,6 @@ source 'https://rubygems.org'
  
  gem 'rails', '4.2.4'
  
-gem 'bootstrap-sass'
  group :production do
    gem 'pg'
    gem 'rails_12factor'
@@ -31,4 +30,6 @@ gem 'bootstrap-sass'
  gem 'jquery-rails'
  # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
  gem 'turbolinks'
+ gem 'bootstrap-sass'
  
+ gem 'bcrypt'
