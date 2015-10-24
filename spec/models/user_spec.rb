@@ -43,6 +43,13 @@ RSpec.describe User, type: :model do
      end
    end
   
-  
-  
+  describe "user name capitalize"
+    before_create :capitalize_name    
+
+    def capitalize_name
+        self.name_array = name.split(" ")
+        self.name_array.each { |name| name.capitalize! }
+        self.name = name_array.join(" ")
+    end
+  end
 end
