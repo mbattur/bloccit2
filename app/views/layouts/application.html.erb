@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Bloccit2</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   
@@ -22,15 +22,10 @@
           <%= link_to "Sign In", new_session_path %> org
           <%= link_to "Sign Up", new_user_path %>
         <% end %>
-          
-        
-        
       </div>
     </ul>
-
-    
     <%= yield %>
   </div>
-
 </body>
 </html>
+
