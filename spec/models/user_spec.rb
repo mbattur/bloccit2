@@ -71,7 +71,6 @@ RSpec.describe User, type: :model do
            expect(user.member).to be_falsey
         end
      end
-   end
      
      context "admin user" do
         before do
@@ -86,7 +85,7 @@ RSpec.describe User, type: :model do
            expect(user.admin?).to be_truthy 
         end
      end
-   end
+end
   
   describe "invalid user" do
      let(:user_with_invalid_name) { User.new(name: "", email: "user@bloccit.com") }
@@ -104,5 +103,5 @@ RSpec.describe User, type: :model do
      it "should be an invalid user due to incorrectly formatted email address" do
        expect(user_with_invalid_email_format).to_not be_valid
      end
-   end
+  end
 end
