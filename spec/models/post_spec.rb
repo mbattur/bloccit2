@@ -1,4 +1,5 @@
 require 'rails_helper'
+include RandomData
 
  RSpec.describe Post, type: :model do
    let(:topic) { Topic.create!(name: RandomData.random_sentence, description: RandomData.random_paragraph) }
@@ -7,7 +8,6 @@ require 'rails_helper'
 
    it { should have_many(:labelings) }
    it { should have_many(:labels).through(:labelings) }
-   
    
    it { should have_many(:comments) }
    it { should have_many(:votes) }
@@ -20,7 +20,6 @@ require 'rails_helper'
    it { should validate_presence_of(:user) }
    it { should validate_length_of(:title).is_at_least(5) }
    it { should validate_length_of(:body).is_at_least(20) }
-   
 
    describe "attributes" do
      it "should respond to title" do
