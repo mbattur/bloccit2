@@ -16,3 +16,4 @@
 !/log/.keep
 /tmp
 app/models/.keep
+/config/application.yml
