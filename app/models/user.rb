@@ -25,6 +25,9 @@ class User < ActiveRecord::Base
    
    def favorite_for(post)
       favorites.where(post_id: post.id).first
+      #using .where to retrieve favorites with post_id that matches with post_id
+      #if user is favorited post it will return an array of one of them, if not it will return an empty array
+      #.first will return either the favorite or nil
    end
    
    def self.avatar_url(user, size)

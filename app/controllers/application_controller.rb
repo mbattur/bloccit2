@@ -11,4 +11,6 @@ class ApplicationController < ActionController::Base
       redirect_to new_session_path
     end
   end
+  #unless the user is current user ask them to sign_in. 
+  #if the user is not current user flash an error message and redirect to sign in page
 end

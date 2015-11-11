@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    #finding the post using id in the params
   end
 
   def new
@@ -16,6 +17,9 @@ class PostsController < ApplicationController
      @topic = Topic.find(params[:topic_id])
      @post = @topic.posts.build(post_params)
      @post.user = current_user
+     #finding the topic the post will be part of using topic_id
+     #building post within @topic
+     #verifying that the post author is signed in user
 
 
      if @post.save
@@ -27,6 +31,7 @@ class PostsController < ApplicationController
        flash[:error] = "There was an error saving the post. Please try again."
        render :new
      end
+     #
   end
   
 
@@ -64,6 +69,7 @@ class PostsController < ApplicationController
  
   def post_params
      params.require(:post).permit(:title, :body)
+     #don't know what's happening here. 
   end
   
   def authorize_user

@@ -28,7 +28,6 @@ class TopicsController < ApplicationController
          end
     end
     
-    
     def new
         @topic = Topic.new
     end
