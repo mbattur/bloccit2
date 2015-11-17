@@ -5,8 +5,9 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     #finding the post using id in the params
+    #IT WILL SHOW THE POST
   end
-
+  
   def new
     @topic = Topic.find(params[:topic_id])  
     @post = Post.new
@@ -16,10 +17,12 @@ class PostsController < ApplicationController
   def create
      @topic = Topic.find(params[:topic_id])
      @post = @topic.posts.build(post_params)
-     @post.user = current_user
      #finding the topic the post will be part of using topic_id
      #building post within @topic
+     #PLEASE HELP ON THESE TWO LINES
+     @post.user = current_user
      #verifying that the post author is signed in user
+     #CORRECTION - SETTING THE POST.USER TO THE CURRENT_USER
 
 
      if @post.save

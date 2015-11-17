@@ -12,7 +12,8 @@ class Label < ActiveRecord::Base
      #can you explain what's label_string is nil?
 
        label_string.split(",").each do |label|
-        #splitting the label string to store them in backed
+        #splitting the label string to store them in backend
+        #STORING THE LABELS ON THE BACKEND BY SPLITTING THE STRING ON A COMMA. 
        label_name = label.strip
        #it strips the label's white spaces.
        new_label = Label.find_or_create_by(name: label_name)

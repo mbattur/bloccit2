@@ -21,6 +21,7 @@ class FavoritesController < ApplicationController
        favorite = current_user.favorites.find(params[:id])
        #finding the post to favorite using post_id
        #checking if there is an associtation between the user who wants to unfavorite, post, and favorite. 
+       #CORRECTION - FINDING AND ASSIGNING THAT FAVORITE OBJECT TO A FAVORITE VARIABLE
        
        if favorite.destroy
            flash[:notice] = "Post unfavorited."
