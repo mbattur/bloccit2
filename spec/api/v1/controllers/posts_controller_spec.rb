@@ -19,6 +19,7 @@ RSpec.describe Api::V1::PostsController, type: :controller do
      
         it "GET show returns child comments" do
             get :show, id: my_post.id
+            
             response_hash = JSON.parse response.body
             expect(response_hash['comments']).to_not be_nil
         end
@@ -41,6 +42,7 @@ RSpec.describe Api::V1::PostsController, type: :controller do
         
         it "GET show returns child comments" do
            get :show, id: my_post.id
+           
            response_hash = JSON.parse response.body
            expect(response_hash['comments']).to_not be_nil
         end
